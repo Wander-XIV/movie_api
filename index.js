@@ -53,7 +53,7 @@ app.get("/genre/:Name", passport.authenticate('jwt', { session: false }), (req, 
   Movies.findOne({ "Genre.Name": req.params.Name })
     .then((movie) => {
       if (movie) {
-        res.status(200).json(movie.Genre.Description);
+        res.status(200).json(movie.Genre);
       } else {
         res.status(400).send("Genre not found.");
       }
