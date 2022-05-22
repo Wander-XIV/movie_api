@@ -13,8 +13,8 @@ const Movies = Models.Movie;
 const Users = Models.User;
 
 //code for connecting to online database (using atlas mongodb) using environment variables
-const uri = process.env.CONNECTION_URI
-mongoose.connect( uri, { useNewUrlParser: true, useUnifiedTopology: true });
+// const uri = process.env.CONNECTION_URI
+mongoose.connect( process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
