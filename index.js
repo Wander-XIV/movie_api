@@ -13,7 +13,6 @@ const Movies = Models.Movie;
 const Users = Models.User;
 
 //code for connecting to online database (using atlas mongodb) using environment variables
-// const uri = process.env.CONNECTION_URI
 mongoose.connect( process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.use(bodyParser.json());
@@ -275,3 +274,4 @@ const port = process.env.PORT || 8080;
 app.listen(port, '0.0.0.0', () => {
   console.log('Listening on Port ' + port);
 });
+
